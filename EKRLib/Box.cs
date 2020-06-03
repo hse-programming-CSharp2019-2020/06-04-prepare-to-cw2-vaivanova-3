@@ -8,20 +8,45 @@ namespace EKRLib
 {
     class Box : Item
     {
+        private double a, b, c;
         private double A
         {
-            set;
-            get;
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
+
+                a = value;
+            }
+            get => a;
         }
         private double B
         {
-            set;
-            get;
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
+
+                b = value;
+            }
+            get => b;
         }
         private double C
         {
-            set;
-            get;
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException();
+                }
+
+                c = value;
+            }
+            get => c;
         }
 
         double GetLongestSideSize()

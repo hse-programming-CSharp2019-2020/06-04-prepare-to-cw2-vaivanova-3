@@ -9,11 +9,19 @@ namespace EKRLib
 {
     public class Item : IComparable<Item>
     {
-
-        private double Weight
+        private double weight;
+        public double Weight
         {
-            set;
-            get;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException();
+                }
+
+                weight = value;
+            }
+            get => weight;
         }
 
         public int CompareTo(Item obj)
