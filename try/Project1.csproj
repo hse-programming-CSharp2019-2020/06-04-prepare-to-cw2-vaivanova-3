@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EKRLib\EKRLib.csproj">
+      <Project>{a590f629-e68d-4607-9d3f-0398bd6a4799}</Project>
+      <Name>EKRLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

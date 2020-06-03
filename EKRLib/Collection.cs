@@ -22,5 +22,10 @@ namespace EKRLib
                 }
             }
         }
+
+        public void Add(T item)
+        {
+            items.Add(item);
+        }
     }
 }

@@ -9,6 +9,10 @@ namespace EKRLib
 {
     public class Item : IComparable<Item>
     {
+        public Item(double w)
+        {
+            Weight = w;
+        }
         private double weight;
         public double Weight
         {

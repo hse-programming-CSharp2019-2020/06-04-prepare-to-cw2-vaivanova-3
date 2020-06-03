@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace EKRLib
 {
-    class Box : Item
+    public class Box : Item
     {
+        public Box(double w, double a, double b, double c) : base(w)
+        {
+            A = a;
+            B = b;
+            C = c;
+        }
         private double a, b, c;
         private double A
         {
@@ -56,7 +62,7 @@ namespace EKRLib
 
         public override string ToString()
         {
-            return base.ToString() + $"A: {A}, B: {B}, C: {C}.";
+            return base.ToString() + $" A: {A}, B: {B}, C: {C}.";
         }
     }
 }
