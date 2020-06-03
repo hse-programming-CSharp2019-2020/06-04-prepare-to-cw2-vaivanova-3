@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using EKRLib;
+using System.Runtime.Serialization.Json;
 
 
 namespace Project1
@@ -40,12 +41,11 @@ namespace Project1
                 {
                     boxes.Add(new Box(rnd.Next(-3, 10) ,rnd.Next(-3, 10), rnd.Next(-3, 10), rnd.Next(-3, 10)));
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     i--;
                 }
             }
-
         }
     }
 }

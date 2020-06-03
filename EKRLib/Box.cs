@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EKRLib
 {
+    [DataContract, KnownType((typeof(Item)))]
     public class Box : Item
     {
+        private double a, b, c;
+
         public Box(double w, double a, double b, double c) : base(w)
         {
             A = a;
             B = b;
             C = c;
         }
-        private double a, b, c;
+        
+
+        [DataMember]
         private double A
         {
             set
@@ -28,6 +34,8 @@ namespace EKRLib
             }
             get => a;
         }
+
+        [DataMember]
         private double B
         {
             set
@@ -41,6 +49,8 @@ namespace EKRLib
             }
             get => b;
         }
+
+        [DataMember]
         private double C
         {
             set
@@ -62,7 +72,7 @@ namespace EKRLib
 
         public override string ToString()
         {
-            return base.ToString() + $" A: {A}, B: {B}, C: {C}.";
+            return $"{base.ToString()} A: {A}, B: {B}, C: {C}.";
         }
     }
 }
